@@ -8,6 +8,22 @@
 		background-size: cover;
 		margin: 0 auto;
 	}
+
+	/* BODY */
+
+	#body {
+
+		background-color : transparent;
+		height : 100%;
+		width : 100%;
+		position : absolute;
+		top : 0em;	
+		overflow-x:scroll;
+		overflow-y:hidden;
+
+		display:flex;
+		align-items: center;
+	}
 }
 
 /* #### iPhone 4+ Portrait or Landscape #### */
