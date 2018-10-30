@@ -2,7 +2,12 @@
 /* #### Mobile Phones Portrait or Landscape #### */
 @media screen and (max-device-width: 640px)
 {
-
+	body {
+		background-color:yellow;
+		background:url("img/hexbg.jpg") no-repeat;
+		background-size: cover;
+		margin: 0 auto;
+	}
 }
 
 /* #### iPhone 4+ Portrait or Landscape #### */
@@ -93,7 +98,7 @@ body {
 
 #container2 {
 
-	background-color:transparent;	
+	background-color:green;	
 }
 
 #title {
