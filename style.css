@@ -1,135 +1,146 @@
 
-/* #### Mobile Phones Portrait or Landscape #### */
-@media screen and (max-device-width: 640px)
-{
-	body {
-		background-color:yellow;
-		background:url("img/hexbg.jpg") no-repeat;
-		background-size: cover;
-		margin: 0 auto;
-	}
-
-	/* BODY */
-
-	#body {
-
-		background-color : transparent;
-		height : 100%;
-		width : auto;
-		position : absolute;
-		top : 0em;	
-		overflow-x:scroll;
-		overflow-y:hidden;
-
-		display:flex;
-		align-items: center;
-	}
+* {
+  box-sizing: border-box;
 }
 
-/* #### iPhone 4+ Portrait or Landscape #### */
-@media screen and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2)
-{
-	
-}
-
-/* #### Tablets Portrait or Landscape #### */
-@media screen and (min-device-width: 768px) and (max-device-width: 1024px)
-{
-	
-}
-
-/* #### Desktops #### */
-@media screen and (min-width: 1024px)
-{
-	* { 
-	margin: 0; 	
-	padding: 0; 
-	height:auto;
-	width:auto;
+a {
+  text-decoration: none;  
 }
 
 body {
+  font-family: 'Lato';
+   -webkit-font-smoothing: antialiased;
+	-moz-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering: optimizelegibility;  
 
-	background-color:yellow;
-	background:url("img/hexbg.jpg") no-repeat;
-	background-size: cover;
-	margin: 0 auto;
+  padding:0;
+  margin:0;
+
+  background-image:url("img/hexbg.jpg");
 }
 
-/* HEAD?FOOT */
-#headfoot {
-	top:0;
-	border-bottom: thick ridge #A2A2A2;
-	position:fixed;
-	height:2.5em;
-	width:100%;
-	background-color:#A2A2A2;
+/* HEADER */
+/*###################################################################*/
+
+#head {
+
+  display: flex;
+  flex-direction: row;
+  background-color:rgba(30, 30, 30, 0.8);     
+  max-height:10vh;
+  min-height:10vh;
+
+  padding-right:5vw;
+  margin:0;  
+
+  align-items: center;
+  justify-content: flex-end;
 }
 
-#botfoot {
-	bottom:0;
-	border-top: thick ridge #2A2A2A;
-	position:fixed;
-	height:2.5em;
-	width:100%;
-	background-color:#A2A2A2;
+#logo {
+  background-image:url("img/UFX_white.png");  
+  height:10vh;
+  width:20vw;
+  background-size:contain;
+  background-repeat:no-repeat;
+  background-position: center;    
 }
 
-/* BODY */
-
-#body {
-
-	background-color : transparent;
-	height : 100%;
-	width : 100%;
-	position : absolute;
-	top : 0em;	
-	overflow-x:scroll;
-	overflow-y:hidden;
-
-	display:flex;
-	align-items: center;
-
+.block {
+  height:10vh;
+  width:52.5vh;
 }
 
-#container1, #container2 {
+#login {
+  height:5vh;
+  width:10vh;
+  background-color:yellow;
+  float:right;
 
-	display:table;
-	
-	height: 0%;
-	width: 100%;
-	padding-left: 1%;
-	padding-right: 1%;		
-	
+  position:relative;
+}
 
+#sign_up {
+  height:5vh;
+  width:10vh;
+  background-color:red;
+  float:right;
+
+  position:relative;  
 
 }
 
-#container1 {
+/* NAVBAR */
+/*###################################################################*/
 
-	background-color:yellow;
+#navbar {
+  display: flex;
+  flex-direction: row;
 
-	
+  align-items:center;
+  justify-content: center;
+
+  background-color:rgba(30, 30, 30, 0.75);   
+  
+  max-height:5vh;
+  min-height:5vh;
+
+  border-bottom:thin solid black;    
 }
 
-#container2 {
+.nav_item {
+  display:flex;  
+  align-items:center;
+  justify-content: center;
 
-	background-color:yellow;	
+  height:5vh;
+  width:20vh;
+  margin:0;  
+  padding:0;
+  background-color:rgba(255,255,255,0);
+
+  border-left:thin solid rgba(255,255,255,0.1);
+  border-right:thin solid rgba(255,255,255,0.1);
+
+
+  color:#AFAFAF;
+
 }
 
-#title {
-	display: table-cell;
-    margin-left: auto;
-    margin-right: auto;  
-    width: 50%;    
-    height: 0%;
-}
+.nav_item:hover {
+  background-color:rgba(255,255,255,0.1);
 }
 
+/* CONTENT */
+/*###################################################################*/
 
+#content {
+  background-color:black;
+  max-height:82.5vh;
+  min-height:82.5vh;
 
+  opacity:0.8;
+}
 
+.main_banner {  
+  
+   
+  height:80.75vh;
+  background-image:url("img/overlay_1.png"), url("img/gungeon.jpg");
+  background-size:cover;
+  opacity:0.7;
 
+}
+
+/* FOOTER */
+/*###################################################################*/
+
+#foot {
+  background-color:#38425c;
+  max-height:2.5vh;
+  min-height:2.5vh;
+}
 
 
 
