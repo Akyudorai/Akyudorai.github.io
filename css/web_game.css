@@ -82,6 +82,17 @@ body {
 
 }
 
+#unitycontainer {
+  display:flex;
+  
+  min-height:94vh;
+  max-height:94vh;
+
+  margin:0;
+  padding:0;
+  
+}
+
 /* GAME */
 /*###################################################################*/
 
