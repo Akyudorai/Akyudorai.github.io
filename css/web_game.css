@@ -87,10 +87,10 @@ body {
 #unitycontainer {
   display:flex;
   
-  min-height:50vh;
-  max-height:50vh;
+  min-height:10%;
+  max-height:10%;
 
-  width:50vw;
+  width:10%;
 
   margin:0;
   padding:0;
