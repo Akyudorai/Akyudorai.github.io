@@ -1,0 +1,16 @@
+{
+"companyName": "UFX",
+"productName": "Combat Valley",
+"productVersion": "1.0",
+"dataUrl": "WEBGL.data.unityweb",
+"wasmCodeUrl": "WEBGL.wasm.code.unityweb",
+"wasmFrameworkUrl": "WEBGL.wasm.framework.unityweb",
+"graphicsAPI": ["WebGL 2.0"],
+"webglContextAttributes": {"preserveDrawingBuffer": false},
+"backgroundUrl": "WEBGL.jpg",
+"splashScreenStyle": "Dark",
+"backgroundColor": "#FFFFFF",
+"developmentBuild": false,
+"multithreading": false,
+"unityVersion": "2019.1.4f1"
+}
