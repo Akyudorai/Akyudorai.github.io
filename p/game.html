@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 <head>
-	<title>Transmissions</title>
+	<title>Portfolio</title>
 
 	<meta charset="utf-8">
 	<meta http-qeuiv="Content-Type" content="text/html; charset=utf-8">
@@ -19,7 +19,26 @@
 	</script>
 
 	<style>
-		ul {
+
+		::-webkit-scrollbar-track
+		{
+		    -webkit-box-shadow: inset 0 0 6px rgba(50,50,50,0.3);
+		    background-color: black;
+		}
+
+		::-webkit-scrollbar
+		{
+		    width: 10px;
+		    background-color: #000;
+		}
+
+		::-webkit-scrollbar-thumb
+		{
+		    background-color: #000000;
+		    border: 2px solid #555555;
+		}
+
+		#top_list {
 		  display: flex;
 		  min-height: 30vh;
 		  max-height: 30vh;  
@@ -29,7 +48,7 @@
 		  list-style-type: none;
 		}
 
-		li {
+		.top_li {
 		  flex: 1;
 		  display: flex;
 		  align-items: stretch;
@@ -42,10 +61,13 @@
 		  background-position: center; 
 		  background-repeat:no-repeat;
 		}
-		li:hover {
+
+
+		.top_li:hover {
 		  
 		}
-		li.active {
+
+		.top_li.active {
 		  flex: 5;
 		  background: #000;
 		  cursor: default;
@@ -56,10 +78,12 @@
 		  background-position: left; 
 		  background-repeat:no-repeat;
 		}
-		li.active h2 { 
+		
+		.top_li.active h2 { 
 		  color: #AFAFAF;
 		}
-		li.active .section-content {
+
+		.top_li.active .section-content {
 		  flex: 100;
 		  opacity: 1;		  
 		  transform: scaleX(1);
@@ -70,7 +94,8 @@
 		  margin-right:1%;
 
 		}
-		li .section-title {
+
+		.top_li .section-title {
 		  flex: 1;
 		  display: flex;
 		  align-items: center;
@@ -80,12 +105,13 @@
 		  text-align: center;
 		  color: #000;
 		}
-		li .section-title h2 {
+		.top_li .section-title h2 {
 		  margin: 0;
 		  transform: rotate(-90deg);
 		  white-space: nowrap;
 		}
-		li .section-content {
+
+		.top_li .section-content {
 		  flex: 1;
 		  display: flex;
 		  flex-direction:column;
@@ -101,6 +127,36 @@
 			margin:0.5em;
 
 		}
+
+		.gamelist_item2 {
+			height:100%; 
+			width:20%; 
+			background-color:rgba(100, 100, 100, 0.5); 
+			list-style-type: none; 
+			display:flex; 
+			flex-direction:column; 
+			margin-right: 1em;
+			position:relative;
+
+			background-size:cover; 
+			background-repeat:no-repeat;
+		}
+
+		.item_overlay {
+			position:absolute; 
+			top:0; 
+			left:0;
+			height:100%; 
+			width:100%; 
+			background-color:red;
+			opacity:0;
+		}
+
+		.item_overlay:hover {
+			background-color:rgb(30, 30, 30);
+			opacity:0.8;
+		}
+
 	</style>
 
 </head>
@@ -113,13 +169,13 @@
 
 			<a href="#"> <div id="nav_games" class="nav_item"> <p>Games</p> </div> </a>
 
-			<a href="#"> <div id="nav_news" class="nav_item"> <p>News</p> </div> </a>
+			<a href="news.html"> <div id="nav_news" class="nav_item"> <p>News</p> </div> </a>
 
-			<a href="#"> <div id="nav_forums" class="nav_item"> <p>Forums</p> </div> </a>
+			<a href="forum.html"> <div id="nav_forums" class="nav_item"> <p>Forums</p> </div> </a>
 
-			<a href="#"> <div id="nav_shop" class="nav_item"> <p>Shop</p> </div> </a>
+			<a href="shop.html"> <div id="nav_shop" class="nav_item"> <p>Shop</p> </div> </a>
 
-			<a href="#"> <div id="nav_contact" class="nav_item"> <p>Contact</p> </div> </a>
+			<a href="contact.html"> <div id="nav_contact" class="nav_item"> <p>Contact</p> </div> </a>
 
 	</div>
 
@@ -127,8 +183,8 @@
 		
 		<div class="main_banner" style="overflow-y:scroll;">
 			
-			<ul style="border-bottom:thick double #AFAFAF">
-			    <li style="background-image: url(../img/overlay_1.png), url(../img/cvalley.png); background-size:cover; background-position: right; background-repeat:no-repeat; border-right: thin solid black;">
+			<ul id="top_list" style="border-bottom:thick double #AFAFAF">
+			    <li class="top_li active"  style="background-image: url(../img/overlay_1.png), url(../img/cvalley.png); background-size:cover; background-position: right; background-repeat:no-repeat; border-right: thin solid black;">
 
 			      <div class="section-title">
 			        
@@ -144,7 +200,8 @@
 			        </a>
 			      </div>
 			    </li>
-			    <li class="active" style="background-image: url(../img/overlay_1.png), url(../img/transmissions.png); background-size:cover; background-position: center; background-repeat:no-repeat; border-right: thin solid black;">
+
+			    <li class="top_li" style="background-image: url(../img/overlay_1.png), url(../img/transmissions.png); background-size:cover; background-position: center; background-repeat:no-repeat; border-right: thin solid black;">
 
 			      <div class="section-title">			      	
 			        
@@ -160,7 +217,8 @@
 			        </a>
 			      </div>
 			    </li>
-			    <li style="background-image: url(../img/overlay_1.png), url(../img/gungeon.jpg); background-size:cover; background-position: center; background-repeat:no-repeat; border-right: thin solid black">
+
+			    <li class="top_li" style="background-image: url(../img/overlay_1.png), url(../img/gungeon.jpg); background-size:cover; background-position: center; background-repeat:no-repeat; border-right: thin solid black">
 
 			      <div class="section-title">
 			        
@@ -170,7 +228,8 @@
 			        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur saepe vel facilis quae nihil ad aspernatur ex delectus. Tenetur nulla voluptates similique quos, quia possimus, magnam esse natus quis ipsa.</p>
 			      </div>
 			    </li>
-			    <li style="background-image: url(../img/overlay_1.png), url(../img/gungeon2.jpg); background-size:cover; background-position: center; background-repeat:no-repeat;">
+
+			    <li class="top_li" style="background-image: url(../img/overlay_1.png), url(../img/gungeon2.jpg); background-size:cover; background-position: center; background-repeat:no-repeat;">
 
 			      <div class="section-title">
 			        
@@ -182,111 +241,481 @@
 			    </li>
 			</ul>
 		    
-		    <div id="web_games" style="display:flex; align-items:center; justify-content:center; margin:0; padding: 0; height:55%; background-color:transparent;">
+		    <div id="web_games" style="display:flex; align-items:center; justify-content:center; margin:0; padding: 0; height:70%; background-color:transparent;">
 		    	
-		    	<div style="display:flex; flex-direction:column; padding:1em; background-color:gray; width:95%; height:90%;"> 
+		    	<div style="display:flex; flex-direction:column; padding:1em; background-color:rgba(50, 50, 50, 0.90); width:95%; height:90%;"> 
 
-		    		<h2> Web Content </h2>
+		    		<h1 style="color:#AFAFAF; margin-left:2.5em;"> Web Content </h1>
 
-		    		<ul class="gamelist_container" style="display:flex; flex-direction:row; background-color:white; width:50%; height:90%; padding: 1em;"> 
+		    		<ul style="display:flex; flex-direction: row; width:100%; height:80%; background-color:transparent; margin-top:0; padding: 0;">
 
-		    			<li>
-			    			<a href="#">
-			    				<div class="gamelist_item" style="height:5em; width:5em; background-color:black;">
+		    			<li class="gamelist_item2" style="position:relative; margin-left: 1em; background-image:url('../img/gungeon.jpg'); background-position: center;">
 
-			    				</div>		    				
-			    			</a>
+		    				<a href="#">
+			    				<div class="item_overlay""> 
+
+			    					<div style="display:flex; height:15%; background-color:rgba(0,0,0,0.1); align-items: center; justify-content: center;">
+				    					<h3 style="color:#AFAFAF;">Game Title</h3>
+				    				</div>
+
+			    					<div style="display: flex; flex-direction:column; align-items: center; justify-content:center; height:70%; background-color:transparent; padding-left:10%; padding-right:10%; color:#AFAFAF">
+			    							
+			    						<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis a cursus justo, in auctor ex. Nunc malesuada non tellus ut egestas. Duis a enim metus. </p>
+
+			    						<p> Sed eget consectetur justo. Ut mattis leo vel nisi egestas, eu blandit felis imperdiet. Integer odio quam, dignissim quis risus sit amet, pellentesque eleifend dolor. Etiam felis augue, consectetur ut massa in, porta rutrum nunc. Nullam sem orci, euismod id urna eget, pharetra imperdiet tortor. </p>
+			    					
+			    					</div>
+
+			    					<div style="position:relative; bottom:0; display:flex; flex-direction:column-reverse; height:15%; background-color:rgba(0,0,0,0.3); align-items: center; justify-content: center;">			    									    					
+				    				</div>
+
+			    				</div>
+		    				</a>
+
+		    				<div style="display:flex; height:15%; background-color:rgba(0,0,0,0.5); align-items: center; justify-content: center;">
+		    					<h3 style="color:#AFAFAF;">Game Title</h3>
+		    				</div>
+
 		    			</li>
 
-		    			<li>
-			    			<a href="#">
-			    				<div class="gamelist_item" style="height:5em; width:5em; background-color:black;">
+		    			<li class="gamelist_item2" style="position:relative; margin-left: 1em; background-image:url('../img/gungeon2.jpg'); background-position: center;">
 
-			    				</div>		    				
-			    			</a>
+		    				<a href="#">
+			    				<div class="item_overlay""> 
+
+			    					<div style="display:flex; height:15%; background-color:rgba(0,0,0,0.1); align-items: center; justify-content: center;">
+				    					<h3 style="color:#AFAFAF;">Game Title</h3>
+				    				</div>
+
+			    					<div style="display: flex; flex-direction:column; align-items: center; justify-content:center; height:70%; background-color:transparent; padding-left:10%; padding-right:10%; color:#AFAFAF">
+			    							
+			    						<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis a cursus justo, in auctor ex. Nunc malesuada non tellus ut egestas. Duis a enim metus. </p>
+
+			    						<p> Sed eget consectetur justo. Ut mattis leo vel nisi egestas, eu blandit felis imperdiet. Integer odio quam, dignissim quis risus sit amet, pellentesque eleifend dolor. Etiam felis augue, consectetur ut massa in, porta rutrum nunc. Nullam sem orci, euismod id urna eget, pharetra imperdiet tortor. </p>
+			    					
+			    					</div>
+
+			    					<div style="position:relative; bottom:0; display:flex; flex-direction:column-reverse; height:15%; background-color:rgba(0,0,0,0.3); align-items: center; justify-content: center;">			    									    					
+				    				</div>
+
+			    				</div>
+		    				</a>
+
+		    				<div style="display:flex; height:15%; background-color:rgba(0,0,0,0.5); align-items: center; justify-content: center;">
+		    					<h3 style="color:#AFAFAF;">Game Title</h3>
+		    				</div>
+
 		    			</li>
 
-		    			<li>
-			    			<a href="#">
-			    				<div class="gamelist_item" style="height:5em; width:5em; background-color:black;">
+		    			<li class="gamelist_item2" style="position:relative; margin-left: 1em; background-image:url('../img/gungeon.jpg'); background-position: center;">
 
-			    				</div>		    				
-			    			</a>
+		    				<a href="#">
+			    				<div class="item_overlay""> 
+
+			    					<div style="display:flex; height:15%; background-color:rgba(0,0,0,0.1); align-items: center; justify-content: center;">
+				    					<h3 style="color:#AFAFAF;">Game Title</h3>
+				    				</div>
+
+			    					<div style="display: flex; flex-direction:column; align-items: center; justify-content:center; height:70%; background-color:transparent; padding-left:10%; padding-right:10%; color:#AFAFAF">
+			    							
+			    						<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis a cursus justo, in auctor ex. Nunc malesuada non tellus ut egestas. Duis a enim metus. </p>
+
+			    						<p> Sed eget consectetur justo. Ut mattis leo vel nisi egestas, eu blandit felis imperdiet. Integer odio quam, dignissim quis risus sit amet, pellentesque eleifend dolor. Etiam felis augue, consectetur ut massa in, porta rutrum nunc. Nullam sem orci, euismod id urna eget, pharetra imperdiet tortor. </p>
+			    					
+			    					</div>
+
+			    					<div style="position:relative; bottom:0; display:flex; flex-direction:column-reverse; height:15%; background-color:rgba(0,0,0,0.3); align-items: center; justify-content: center;">			    									    					
+				    				</div>
+
+			    				</div>
+		    				</a>
+
+		    				<div style="display:flex; height:15%; background-color:rgba(0,0,0,0.5); align-items: center; justify-content: center;">
+		    					<h3 style="color:#AFAFAF;">Game Title</h3>
+		    				</div>
+
 		    			</li>
 
-		    			<li>
-			    			<a href="#">
-			    				<div class="gamelist_item" style="height:5em; width:5em; background-color:black;">
+		    			<li class="gamelist_item2" style="position:relative; margin-left: 1em; background-image:url('../img/gungeon2.jpg'); background-position: center;">
 
-			    				</div>		    				
-			    			</a>
+		    				<a href="#">
+			    				<div class="item_overlay""> 
+
+			    					<div style="display:flex; height:15%; background-color:rgba(0,0,0,0.1); align-items: center; justify-content: center;">
+				    					<h3 style="color:#AFAFAF;">Game Title</h3>
+				    				</div>
+
+			    					<div style="display: flex; flex-direction:column; align-items: center; justify-content:center; height:70%; background-color:transparent; padding-left:10%; padding-right:10%; color:#AFAFAF">
+			    							
+			    						<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis a cursus justo, in auctor ex. Nunc malesuada non tellus ut egestas. Duis a enim metus. </p>
+
+			    						<p> Sed eget consectetur justo. Ut mattis leo vel nisi egestas, eu blandit felis imperdiet. Integer odio quam, dignissim quis risus sit amet, pellentesque eleifend dolor. Etiam felis augue, consectetur ut massa in, porta rutrum nunc. Nullam sem orci, euismod id urna eget, pharetra imperdiet tortor. </p>
+			    					
+			    					</div>
+
+			    					<div style="position:relative; bottom:0; display:flex; flex-direction:column-reverse; height:15%; background-color:rgba(0,0,0,0.3); align-items: center; justify-content: center;">			    									    					
+				    				</div>
+
+			    				</div>
+		    				</a>
+
+		    				<div style="display:flex; height:15%; background-color:rgba(0,0,0,0.5); align-items: center; justify-content: center;">
+		    					<h3 style="color:#AFAFAF;">Game Title</h3>
+		    				</div>
+
 		    			</li>
 
-		    			<li>
-			    			<a href="#">
-			    				<div class="gamelist_item" style="height:5em; width:5em; background-color:black;">
+		    			<li class="gamelist_item2" style="position:relative; margin-left: 1em; background-image:url('../img/gungeon.jpg'); background-position: center;">
 
-			    				</div>		    				
-			    			</a>
+		    				<a href="#">
+			    				<div class="item_overlay""> 
+
+			    					<div style="display:flex; height:15%; background-color:rgba(0,0,0,0.1); align-items: center; justify-content: center;">
+				    					<h3 style="color:#AFAFAF;">Game Title</h3>
+				    				</div>
+
+			    					<div style="display: flex; flex-direction:column; align-items: center; justify-content:center; height:70%; background-color:transparent; padding-left:10%; padding-right:10%; color:#AFAFAF">
+			    							
+			    						<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis a cursus justo, in auctor ex. Nunc malesuada non tellus ut egestas. Duis a enim metus. </p>
+
+			    						<p> Sed eget consectetur justo. Ut mattis leo vel nisi egestas, eu blandit felis imperdiet. Integer odio quam, dignissim quis risus sit amet, pellentesque eleifend dolor. Etiam felis augue, consectetur ut massa in, porta rutrum nunc. Nullam sem orci, euismod id urna eget, pharetra imperdiet tortor. </p>
+			    					
+			    					</div>
+
+			    					<div style="position:relative; bottom:0; display:flex; flex-direction:column-reverse; height:15%; background-color:rgba(0,0,0,0.3); align-items: center; justify-content: center;">			    									    					
+				    				</div>
+
+			    				</div>
+		    				</a>
+
+		    				<div style="display:flex; height:15%; background-color:rgba(0,0,0,0.5); align-items: center; justify-content: center;">
+		    					<h3 style="color:#AFAFAF;">Game Title</h3>
+		    				</div>
+
 		    			</li>
 
-		    			<li>
-			    			<a href="#">
-			    				<div class="gamelist_item" style="height:5em; width:5em; background-color:black;">
-
-			    				</div>		    				
-			    			</a>
-		    			</li>
-
-		    			<li>
-			    			<a href="#">
-			    				<div class="gamelist_item" style="height:5em; width:5em; background-color:black;">
-
-			    				</div>		    				
-			    			</a>
-		    			</li>
-
-		    			<li>
-			    			<a href="#">
-			    				<div class="gamelist_item" style="height:5em; width:5em; background-color:black;">
-
-			    				</div>		    				
-			    			</a>
-		    			</li>
-
-		    		</ul>		    		
+		    		</ul>
+							    		    		
 
 		    	</div>
 		    </div>
 
-		    <div id="dl_games" style="display:flex; align-items:center; justify-content:center; margin:0; padding: 0; height:50vh; background-color:transparent;">
+		    <div id="dl_games" style="display:flex; align-items:center; justify-content:center; margin:0; padding: 0; height:70%; background-color:transparent;">
 		    	
-		    	<div style="display:flex; flex-direction:column; padding:1em; background-color:gray; width:95%; height:90%;"> 
+		    	<div style="display:flex; flex-direction:column; padding:1em; background-color:rgba(50, 50, 50, 0.90); width:95%; height:90%;"> 
 
-		    		<h2> Downloadables </h2>
+		    		<h1 style="color:#AFAFAF; margin-left:2.5em;"> Downloadable Content </h1>
 
-		    		<ul class="gamelist_container" style="display:flex; flex-direction:row; background-color:white; width:50%; height:90%; padding: 1em;"> 
-		    	
-		    	
-		    		</ul>		    		
+		    		<ul style="display:flex; flex-direction: row; width:100%; height:80%; background-color:transparent; margin-top:0; padding: 0;">
+
+		    			<li class="gamelist_item2" style="position:relative; margin-left: 1em; background-image:url('../img/gungeon2.jpg'); background-position: center;">
+
+		    				<a href="#">
+			    				<div class="item_overlay""> 
+
+			    					<div style="display:flex; height:15%; background-color:rgba(0,0,0,0.1); align-items: center; justify-content: center;">
+				    					<h3 style="color:#AFAFAF;">Game Title</h3>
+				    				</div>
+
+			    					<div style="display: flex; flex-direction:column; align-items: center; justify-content:center; height:70%; background-color:transparent; padding-left:10%; padding-right:10%; color:#AFAFAF">
+			    							
+			    						<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis a cursus justo, in auctor ex. Nunc malesuada non tellus ut egestas. Duis a enim metus. </p>
+
+			    						<p> Sed eget consectetur justo. Ut mattis leo vel nisi egestas, eu blandit felis imperdiet. Integer odio quam, dignissim quis risus sit amet, pellentesque eleifend dolor. Etiam felis augue, consectetur ut massa in, porta rutrum nunc. Nullam sem orci, euismod id urna eget, pharetra imperdiet tortor. </p>
+			    					
+			    					</div>
+
+			    					<div style="position:relative; bottom:0; display:flex; flex-direction:column-reverse; height:15%; background-color:rgba(0,0,0,0.3); align-items: center; justify-content: center;">			    									    					
+				    				</div>
+
+			    				</div>
+		    				</a>
+
+		    				<div style="display:flex; height:15%; background-color:rgba(0,0,0,0.5); align-items: center; justify-content: center;">
+		    					<h3 style="color:#AFAFAF;">Game Title</h3>
+		    				</div>
+
+		    			</li>
+
+		    			<li class="gamelist_item2" style="position:relative; margin-left: 1em; background-image:url('../img/gungeon.jpg'); background-position: center;">
+
+		    				<a href="#">
+			    				<div class="item_overlay""> 
+
+			    					<div style="display:flex; height:15%; background-color:rgba(0,0,0,0.1); align-items: center; justify-content: center;">
+				    					<h3 style="color:#AFAFAF;">Game Title</h3>
+				    				</div>
+
+			    					<div style="display: flex; flex-direction:column; align-items: center; justify-content:center; height:70%; background-color:transparent; padding-left:10%; padding-right:10%; color:#AFAFAF">
+			    							
+			    						<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis a cursus justo, in auctor ex. Nunc malesuada non tellus ut egestas. Duis a enim metus. </p>
+
+			    						<p> Sed eget consectetur justo. Ut mattis leo vel nisi egestas, eu blandit felis imperdiet. Integer odio quam, dignissim quis risus sit amet, pellentesque eleifend dolor. Etiam felis augue, consectetur ut massa in, porta rutrum nunc. Nullam sem orci, euismod id urna eget, pharetra imperdiet tortor. </p>
+			    					
+			    					</div>
+
+			    					<div style="position:relative; bottom:0; display:flex; flex-direction:column-reverse; height:15%; background-color:rgba(0,0,0,0.3); align-items: center; justify-content: center;">			    									    					
+				    				</div>
+
+			    				</div>
+		    				</a>
+
+		    				<div style="display:flex; height:15%; background-color:rgba(0,0,0,0.5); align-items: center; justify-content: center;">
+		    					<h3 style="color:#AFAFAF;">Game Title</h3>
+		    				</div>
+
+		    			</li>
+
+		    			<li class="gamelist_item2" style="position:relative; margin-left: 1em; background-image:url('../img/gungeon2.jpg'); background-position: center;">
+
+		    				<a href="#">
+			    				<div class="item_overlay""> 
+
+			    					<div style="display:flex; height:15%; background-color:rgba(0,0,0,0.1); align-items: center; justify-content: center;">
+				    					<h3 style="color:#AFAFAF;">Game Title</h3>
+				    				</div>
+
+			    					<div style="display: flex; flex-direction:column; align-items: center; justify-content:center; height:70%; background-color:transparent; padding-left:10%; padding-right:10%; color:#AFAFAF">
+			    							
+			    						<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis a cursus justo, in auctor ex. Nunc malesuada non tellus ut egestas. Duis a enim metus. </p>
+
+			    						<p> Sed eget consectetur justo. Ut mattis leo vel nisi egestas, eu blandit felis imperdiet. Integer odio quam, dignissim quis risus sit amet, pellentesque eleifend dolor. Etiam felis augue, consectetur ut massa in, porta rutrum nunc. Nullam sem orci, euismod id urna eget, pharetra imperdiet tortor. </p>
+			    					
+			    					</div>
+
+			    					<div style="position:relative; bottom:0; display:flex; flex-direction:column-reverse; height:15%; background-color:rgba(0,0,0,0.3); align-items: center; justify-content: center;">			    									    					
+				    				</div>
+
+			    				</div>
+		    				</a>
+
+		    				<div style="display:flex; height:15%; background-color:rgba(0,0,0,0.5); align-items: center; justify-content: center;">
+		    					<h3 style="color:#AFAFAF;">Game Title</h3>
+		    				</div>
+
+		    			</li>
+
+		    			<li class="gamelist_item2" style="position:relative; margin-left: 1em; background-image:url('../img/gungeon.jpg'); background-position: center;">
+
+		    				<a href="#">
+			    				<div class="item_overlay""> 
+
+			    					<div style="display:flex; height:15%; background-color:rgba(0,0,0,0.1); align-items: center; justify-content: center;">
+				    					<h3 style="color:#AFAFAF;">Game Title</h3>
+				    				</div>
+
+			    					<div style="display: flex; flex-direction:column; align-items: center; justify-content:center; height:70%; background-color:transparent; padding-left:10%; padding-right:10%; color:#AFAFAF">
+			    							
+			    						<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis a cursus justo, in auctor ex. Nunc malesuada non tellus ut egestas. Duis a enim metus. </p>
+
+			    						<p> Sed eget consectetur justo. Ut mattis leo vel nisi egestas, eu blandit felis imperdiet. Integer odio quam, dignissim quis risus sit amet, pellentesque eleifend dolor. Etiam felis augue, consectetur ut massa in, porta rutrum nunc. Nullam sem orci, euismod id urna eget, pharetra imperdiet tortor. </p>
+			    					
+			    					</div>
+
+			    					<div style="position:relative; bottom:0; display:flex; flex-direction:column-reverse; height:15%; background-color:rgba(0,0,0,0.3); align-items: center; justify-content: center;">			    									    					
+				    				</div>
+
+			    				</div>
+		    				</a>
+
+		    				<div style="display:flex; height:15%; background-color:rgba(0,0,0,0.5); align-items: center; justify-content: center;">
+		    					<h3 style="color:#AFAFAF;">Game Title</h3>
+		    				</div>
+
+		    			</li>
+
+		    			<li class="gamelist_item2" style="position:relative; margin-left: 1em; background-image:url('../img/gungeon2.jpg'); background-position: center;">
+
+		    				<a href="#">
+			    				<div class="item_overlay""> 
+
+			    					<div style="display:flex; height:15%; background-color:rgba(0,0,0,0.1); align-items: center; justify-content: center;">
+				    					<h3 style="color:#AFAFAF;">Game Title</h3>
+				    				</div>
+
+			    					<div style="display: flex; flex-direction:column; align-items: center; justify-content:center; height:70%; background-color:transparent; padding-left:10%; padding-right:10%; color:#AFAFAF">
+			    							
+			    						<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis a cursus justo, in auctor ex. Nunc malesuada non tellus ut egestas. Duis a enim metus. </p>
+
+			    						<p> Sed eget consectetur justo. Ut mattis leo vel nisi egestas, eu blandit felis imperdiet. Integer odio quam, dignissim quis risus sit amet, pellentesque eleifend dolor. Etiam felis augue, consectetur ut massa in, porta rutrum nunc. Nullam sem orci, euismod id urna eget, pharetra imperdiet tortor. </p>
+			    					
+			    					</div>
+
+			    					<div style="position:relative; bottom:0; display:flex; flex-direction:column-reverse; height:15%; background-color:rgba(0,0,0,0.3); align-items: center; justify-content: center;">			    									    					
+				    				</div>
+
+			    				</div>
+		    				</a>
+
+		    				<div style="display:flex; height:15%; background-color:rgba(0,0,0,0.5); align-items: center; justify-content: center;">
+		    					<h3 style="color:#AFAFAF;">Game Title</h3>
+		    				</div>
+
+		    			</li>
+
+		    		</ul>
+							    		    		
 
 		    	</div>
-
 		    </div>
 
-		    <div id="others" style="display:flex; align-items:center; justify-content:center; margin:0; padding: 0; height:50vh; background-color:transparent;">
+		    <div id="others" style="display:flex; align-items:center; justify-content:center; margin:0; padding: 0; height:70%; background-color:transparent;">
 		    	
-		    	<div style="display:flex; flex-direction:column; padding:1em; background-color:gray; width:95%; height:90%;"> 
+		    	<div style="display:flex; flex-direction:column; padding:1em; background-color:rgba(50, 50, 50, 0.90); width:95%; height:90%;"> 
 
-		    		<h2> Others </h2>
+		    		<h1 style="color:#AFAFAF; margin-left:2.5em;"> Other Content </h1>
 
-		    		<ul class="gamelist_container" style="display:flex; flex-direction:row; background-color:white; width:50%; height:90%; padding: 1em;"> 
-		    	
-		    	
-		    		</ul>		    		
+		    		<ul style="display:flex; flex-direction: row; width:100%; height:80%; background-color:transparent; margin-top:0; padding: 0;">
+
+		    			<li class="gamelist_item2" style="position:relative; margin-left: 1em; background-image:url('../img/gungeon.jpg'); background-position: center;">
+
+		    				<a href="#">
+			    				<div class="item_overlay""> 
+
+			    					<div style="display:flex; height:15%; background-color:rgba(0,0,0,0.1); align-items: center; justify-content: center;">
+				    					<h3 style="color:#AFAFAF;">Game Title</h3>
+				    				</div>
+
+			    					<div style="display: flex; flex-direction:column; align-items: center; justify-content:center; height:70%; background-color:transparent; padding-left:10%; padding-right:10%; color:#AFAFAF">
+			    							
+			    						<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis a cursus justo, in auctor ex. Nunc malesuada non tellus ut egestas. Duis a enim metus. </p>
+
+			    						<p> Sed eget consectetur justo. Ut mattis leo vel nisi egestas, eu blandit felis imperdiet. Integer odio quam, dignissim quis risus sit amet, pellentesque eleifend dolor. Etiam felis augue, consectetur ut massa in, porta rutrum nunc. Nullam sem orci, euismod id urna eget, pharetra imperdiet tortor. </p>
+			    					
+			    					</div>
+
+			    					<div style="position:relative; bottom:0; display:flex; flex-direction:column-reverse; height:15%; background-color:rgba(0,0,0,0.3); align-items: center; justify-content: center;">			    									    					
+				    				</div>
+
+			    				</div>
+		    				</a>
+
+		    				<div style="display:flex; height:15%; background-color:rgba(0,0,0,0.5); align-items: center; justify-content: center;">
+		    					<h3 style="color:#AFAFAF;">Game Title</h3>
+		    				</div>
+
+		    			</li>
+
+		    			<li class="gamelist_item2" style="position:relative; margin-left: 1em; background-image:url('../img/gungeon2.jpg'); background-position: center;">
+
+		    				<a href="#">
+			    				<div class="item_overlay""> 
+
+			    					<div style="display:flex; height:15%; background-color:rgba(0,0,0,0.1); align-items: center; justify-content: center;">
+				    					<h3 style="color:#AFAFAF;">Game Title</h3>
+				    				</div>
+
+			    					<div style="display: flex; flex-direction:column; align-items: center; justify-content:center; height:70%; background-color:transparent; padding-left:10%; padding-right:10%; color:#AFAFAF">
+			    							
+			    						<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis a cursus justo, in auctor ex. Nunc malesuada non tellus ut egestas. Duis a enim metus. </p>
+
+			    						<p> Sed eget consectetur justo. Ut mattis leo vel nisi egestas, eu blandit felis imperdiet. Integer odio quam, dignissim quis risus sit amet, pellentesque eleifend dolor. Etiam felis augue, consectetur ut massa in, porta rutrum nunc. Nullam sem orci, euismod id urna eget, pharetra imperdiet tortor. </p>
+			    					
+			    					</div>
+
+			    					<div style="position:relative; bottom:0; display:flex; flex-direction:column-reverse; height:15%; background-color:rgba(0,0,0,0.3); align-items: center; justify-content: center;">			    									    					
+				    				</div>
+
+			    				</div>
+		    				</a>
+
+		    				<div style="display:flex; height:15%; background-color:rgba(0,0,0,0.5); align-items: center; justify-content: center;">
+		    					<h3 style="color:#AFAFAF;">Game Title</h3>
+		    				</div>
+
+		    			</li>
+
+		    			<li class="gamelist_item2" style="position:relative; margin-left: 1em; background-image:url('../img/gungeon.jpg'); background-position: center;">
+
+		    				<a href="#">
+			    				<div class="item_overlay""> 
+
+			    					<div style="display:flex; height:15%; background-color:rgba(0,0,0,0.1); align-items: center; justify-content: center;">
+				    					<h3 style="color:#AFAFAF;">Game Title</h3>
+				    				</div>
+
+			    					<div style="display: flex; flex-direction:column; align-items: center; justify-content:center; height:70%; background-color:transparent; padding-left:10%; padding-right:10%; color:#AFAFAF">
+			    							
+			    						<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis a cursus justo, in auctor ex. Nunc malesuada non tellus ut egestas. Duis a enim metus. </p>
+
+			    						<p> Sed eget consectetur justo. Ut mattis leo vel nisi egestas, eu blandit felis imperdiet. Integer odio quam, dignissim quis risus sit amet, pellentesque eleifend dolor. Etiam felis augue, consectetur ut massa in, porta rutrum nunc. Nullam sem orci, euismod id urna eget, pharetra imperdiet tortor. </p>
+			    					
+			    					</div>
+
+			    					<div style="position:relative; bottom:0; display:flex; flex-direction:column-reverse; height:15%; background-color:rgba(0,0,0,0.3); align-items: center; justify-content: center;">			    									    					
+				    				</div>
+
+			    				</div>
+		    				</a>
+
+		    				<div style="display:flex; height:15%; background-color:rgba(0,0,0,0.5); align-items: center; justify-content: center;">
+		    					<h3 style="color:#AFAFAF;">Game Title</h3>
+		    				</div>
+
+		    			</li>
+
+		    			<li class="gamelist_item2" style="position:relative; margin-left: 1em; background-image:url('../img/gungeon2.jpg'); background-position: center;">
+
+		    				<a href="#">
+			    				<div class="item_overlay""> 
+
+			    					<div style="display:flex; height:15%; background-color:rgba(0,0,0,0.1); align-items: center; justify-content: center;">
+				    					<h3 style="color:#AFAFAF;">Game Title</h3>
+				    				</div>
+
+			    					<div style="display: flex; flex-direction:column; align-items: center; justify-content:center; height:70%; background-color:transparent; padding-left:10%; padding-right:10%; color:#AFAFAF">
+			    							
+			    						<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis a cursus justo, in auctor ex. Nunc malesuada non tellus ut egestas. Duis a enim metus. </p>
+
+			    						<p> Sed eget consectetur justo. Ut mattis leo vel nisi egestas, eu blandit felis imperdiet. Integer odio quam, dignissim quis risus sit amet, pellentesque eleifend dolor. Etiam felis augue, consectetur ut massa in, porta rutrum nunc. Nullam sem orci, euismod id urna eget, pharetra imperdiet tortor. </p>
+			    					
+			    					</div>
+
+			    					<div style="position:relative; bottom:0; display:flex; flex-direction:column-reverse; height:15%; background-color:rgba(0,0,0,0.3); align-items: center; justify-content: center;">			    									    					
+				    				</div>
+
+			    				</div>
+		    				</a>
+
+		    				<div style="display:flex; height:15%; background-color:rgba(0,0,0,0.5); align-items: center; justify-content: center;">
+		    					<h3 style="color:#AFAFAF;">Game Title</h3>
+		    				</div>
+
+		    			</li>
+
+		    			<li class="gamelist_item2" style="position:relative; margin-left: 1em; background-image:url('../img/gungeon.jpg'); background-position: center;">
+
+		    				<a href="#">
+			    				<div class="item_overlay""> 
+
+			    					<div style="display:flex; height:15%; background-color:rgba(0,0,0,0.1); align-items: center; justify-content: center;">
+				    					<h3 style="color:#AFAFAF;">Game Title</h3>
+				    				</div>
+
+			    					<div style="display: flex; flex-direction:column; align-items: center; justify-content:center; height:70%; background-color:transparent; padding-left:10%; padding-right:10%; color:#AFAFAF">
+			    							
+			    						<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis a cursus justo, in auctor ex. Nunc malesuada non tellus ut egestas. Duis a enim metus. </p>
+
+			    						<p> Sed eget consectetur justo. Ut mattis leo vel nisi egestas, eu blandit felis imperdiet. Integer odio quam, dignissim quis risus sit amet, pellentesque eleifend dolor. Etiam felis augue, consectetur ut massa in, porta rutrum nunc. Nullam sem orci, euismod id urna eget, pharetra imperdiet tortor. </p>
+			    					
+			    					</div>
+
+			    					<div style="position:relative; bottom:0; display:flex; flex-direction:column-reverse; height:15%; background-color:rgba(0,0,0,0.3); align-items: center; justify-content: center;">			    									    					
+				    				</div>
+
+			    				</div>
+		    				</a>
+
+		    				<div style="display:flex; height:15%; background-color:rgba(0,0,0,0.5); align-items: center; justify-content: center;">
+		    					<h3 style="color:#AFAFAF;">Game Title</h3>
+		    				</div>
+
+		    			</li>
+
+		    		</ul>
+							    		    		
 
 		    	</div>
-
 		    </div>
 
 		</div>

@@ -1,4 +1,4 @@
-var section = $('li');
+var section = $('.top_li');
 
 function toggleAccordion() {
   section.removeClass('active');
