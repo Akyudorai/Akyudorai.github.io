@@ -71,7 +71,7 @@ body {
   min-height:94vh;
   opacity:1;
   display:flex;
-  align-items:center;
+  align-items:center; 
   justify-content: center;
 }
 
