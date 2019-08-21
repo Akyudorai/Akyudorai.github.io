@@ -70,6 +70,9 @@ body {
   max-height:94vh;
   min-height:94vh;
   opacity:1;
+  display:flex;
+  align-items:center;
+  justify-content: center;
 }
 
 .main_banner {  
@@ -79,6 +82,8 @@ body {
   /*background-image:url("../img/overlay_1.png"), url("../img/gungeon.jpg");*/
   background-size:cover;
   opacity:1;
+
+  width:90%;
 
   background-color:green;
 
