@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<head>
+	<title>Transmissions</title>
+
+	<meta charset="utf-8">
+	<meta http-qeuiv="Content-Type" content="text/html; charset=utf-8">
+
+	<link href="../../css/web_game.css" rel="stylesheet" type="text/css"/>
+
+
+	<script type="text/javascript" src="../../js/jquery-2.1.4.js"></script>	
+	<script type="text.javascript" src="../../js/javascript.js"></script>
+	
+	<script src="../../GAME/ORBITAL/TemplateData/UnityProgress.js"></script>
+	<script src="../../GAME/ORBITAL/Build/UnityLoader.js"></script>
+	<script>
+		var unityInstance = UnityLoader.instantiate("unityContainer", "../../GAME/ORBITAL/Build/WEBGL.json", {onProgress: UnityProgress});
+	</script>
+
+</head>
+
+<body>
+
+	<div id="navbar">
+		
+			<a href="../../index.html"> <div id="nav_home" class="nav_item"> <p>Homepage</p> </div> </a>
+
+			<a href="#"> <div id="nav_games" class="nav_item"> <p>Games</p> </div> </a>
+
+			<a href="#"> <div id="nav_news" class="nav_item"> <p>News</p> </div> </a>
+
+			<a href="#"> <div id="nav_forums" class="nav_item"> <p>Forums</p> </div> </a>
+
+			<a href="#"> <div id="nav_shop" class="nav_item"> <p>Shop</p> </div> </a>
+
+			<a href="#"> <div id="nav_contact" class="nav_item"> <p>Contact</p> </div> </a>
+
+	</div>
+
+	<div id="content">
+		
+		<div class="main_banner">
+			
+			<div id="unityContainer"></div>
+
+			<div class="webgl-content">
+		      
+		      
+		    <!--
+		      <div class="footer">
+		        <div class="webgl-logo"></div>
+		        <div class="fullscreen" onclick="unityInstance.SetFullscreen(1)"></div>
+		        <div class="title">Transmissions</div>
+		     </div>
+		 	-->
+
+		</div>
+
+	</div>
+
+	<div id="foot"></div>
+
+</body>
