@@ -1,54 +1,43 @@
 <!DOCTYPE html>
 
 <head>
-	<title>UFX</title>
-
+	<title>Akyudorai Landing Page</title>
 	<meta charset="utf-8">
 	<link href="style.css" rel="stylesheet" type="text/css"/>
-
-	<script type="text/javascript" src="js/jquery-2.1.4.js"></script>	
-	<script type="text.javascript" src="js/javascript.js"></script>
-
 </head>
 
 <body>
 
-<!--
-	<div id="head">
-			
-			<img id="logo">
 
-			<div class="block"></div>
+	<image src="img/akyudorai.jpg"/>
+	<h1><b> Hello World </b></h1>
+	<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum fringilla laoreet feugiat. Proin eu neque interdum, consectetur lectus vel, sollicitudin felis. In ultrices cursus luctus. Sed in elit porta, ullamcorper nibh a, maximus metus. Phasellus ante leo, lobortis sit amet elit nec, tincidunt sollicitudin neque. Vestibulum dignissim felis massa, convallis placerat felis egestas sed. Suspendisse mattis mauris lacinia neque dignissim, ut tempus ex lobortis. Cras ac diam odio. Curabitur laoreet mauris est, ac lobortis nunc molestie in.</p>
 
-			<a href="#"> <div id="login"></div> </a>
+	<p id="counter">0</p>
 
-			<a href="#"> <div id="sign_up"></div> </a>
+	<button id="up">+</button>
+	<button id="down">-</button>
 
-	</div>
--->
+	<script src="js/landing.js"></script>
 
-	<div id="navbar">
-		
-			<a href="#"> <div id="nav_home" class="nav_item"> <p>Homepage</p> </div> </a>
 
-			<a href="p/game.html"> <div id="nav_games" class="nav_item"> <p>Games</p> </div> </a>
+	<div class="player" id="player"></div>
+	<script src="js/controller.js"></script>
 
-			<a href="p/news.html"> <div id="nav_news" class="nav_item"> <p>News</p> </div> </a>
+	<search>
+		<form>
+			<input name="fsrch" id = "fsrch" placeholder="Search">
+		</form>
+	</search>
 
-			<a href="p/forum.html"> <div id="nav_forums" class="nav_item"> <p>Forums</p> </div> </a>
+	<select name="cars" id="cars">
+		<option value="volvo">Volvo</option>
+		<option value="saab">Saab</option>
+		<option value="mercedes">Mercedes</option>
+		<option value="audi">Audi</option>
+	</select>
 
-			<a href="p/shop.html"> <div id="nav_shop" class="nav_item"> <p>Shop</p> </div> </a>
-
-			<a href="p/contact.html"> <div id="nav_contact" class="nav_item"> <p>Contact</p> </div> </a>
-
-	</div>
-
-	<div id="content">
-		
-		<div class="main_banner"></div>
-
-	</div>
-
-	<div id="foot"></div>
+	<br>
+	
 
 </body>
