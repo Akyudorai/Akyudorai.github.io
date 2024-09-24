@@ -13,6 +13,8 @@ const KEYCODE = {
 
 // Component References
 var player = document.getElementById("player");
+var container = document.getElementById("game-container");
+
 
 // ======== VARIABLES ========
 var x = parseInt(0);
@@ -23,6 +25,13 @@ var jumpForce = 2.5;
 var velocityX = 0;
 var velocityY = 0;
 var keys = {};
+
+// Constraints
+var offsets = container.getBoundingClientRect();
+var minX = 0;
+var maxX = offsets.left + offsets.width;
+var minY = offsets.top;
+var maxY = offsets.top + offsets.height;
 
 
 // ======== INITIALIZATION ========
@@ -66,6 +75,7 @@ function update()
 
 	physics()
 	gravity()
+	constraints();
 	window.requestAnimationFrame(update);
 }
 
@@ -92,10 +102,35 @@ function physics()
 	player.style.top = (y) + "px";
 }
 
+function constraints()
+{	
+	//console.log(minX)
+
+	// Bounds
+	if (x < minX) {
+		x = minX;
+	}
+
+	if (x > maxX - 100) {
+		x = maxX - 100;
+	}
+
+	if (y < minY) {
+		y = minY;
+	}
+
+	if (y > maxY) {
+		y = maxY;
+	}
+
+	player.scrollIntoView();
+}
+
 function gravity()
 {
 	var gravForce = 0.1;
-	maxY = (window.innerHeight/2.5);
+	
+	maxY = 850/2.5;
 	//console.log(y)
 	if (y + size < maxY) {
 		velocityY += gravForce;	
