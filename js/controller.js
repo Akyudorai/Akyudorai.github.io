@@ -19,12 +19,16 @@ var container = document.getElementById("game-container");
 // ======== VARIABLES ========
 var x = parseInt(0);
 var y = parseInt(0);
-var size = parseInt(100);
-var speed = 3;
-var jumpForce = 2.5;
+var sizeX = parseInt(100);
+var sizeY = parseInt(150);
+var speed = 2;
+var jumpForce = 4;
 var velocityX = 0;
 var velocityY = 0;
 var keys = {};
+
+var isMoving = false;
+var animationIndex = 0;
 
 // Constraints
 var offsets = container.getBoundingClientRect();
@@ -59,6 +63,17 @@ function init() {
 // ======== UPDATE ========
 function update()
 {	
+	
+	input();
+	gravity();
+	constraints();
+	animate();
+	window.requestAnimationFrame(update);
+}
+
+// ======== FUNCTIONS ========
+function input()
+{
 	vX = 0;
 	if (keys[KEYCODE.A])
 	{	
@@ -69,17 +84,13 @@ function update()
 	if (keys[KEYCODE.D]) 
 	{	
 		console.log("D");
-		vX += 1.0 * speed;
+		vX += 1.0 * speed;		
 	}
 	velocityX = vX * speed;
 
-	physics()
-	gravity()
-	constraints();
-	window.requestAnimationFrame(update);
+	isMoving = (keys[KEYCODE.A] || keys[KEYCODE.D]) ? true : false;
 }
 
-// ======== FUNCTIONS ========
 function onKeyDown(e)
 {
 	e = e || window.event;
@@ -93,26 +104,61 @@ function onKeyUp(e)
 	delete keys[key];
 }
 
-function physics()
+function animate() 
 {
-	x += velocityX;
-	y += velocityY;
+	var idle = 6;
+	var walk = 10;
 
-	player.style.left = (x) + "px";
-	player.style.top = (y) + "px";
+	var isLeft = false;
+	if (isMoving) {		
+		player.style.backgroundImage="url(img/Sprites/Walk.png)";
+		if (isLeft) {
+			// PUT TRANSFORM CODE HERE
+			// transform:scale(-1, 1);
+		} else {
+			// PUT TRANSFORM CODE HERE
+			// transform:scale(1, 1);
+		}
+		
+	} else {
+		player.style.backgroundImage="url(img/Sprites/Idle.png)";
+	}
+
+
+
+	var frameCount = (isMoving) ? 10 : 6;
+
+	 
+	animationIndex += 0.01 * 10;
+
+	var frame = Math.floor(animationIndex)
+
+	var xPos = 40 + (frame * 128)
+	player.style.backgroundPosition = '-'+xPos+'px -60px';
+
+	if (animationIndex >= frameCount) {
+		animationIndex = 0;
+	}
+
+
+	
+
 }
+
 
 function constraints()
 {	
-	//console.log(minX)
+	// Motion
+	x += velocityX;
+	y += velocityY;
 
 	// Bounds
 	if (x < minX) {
 		x = minX;
 	}
 
-	if (x > maxX - 100) {
-		x = maxX - 100;
+	if (x > maxX - sizeX) {
+		x = maxX - sizeX;
 	}
 
 	if (y < minY) {
@@ -123,6 +169,8 @@ function constraints()
 		y = maxY;
 	}
 
+	player.style.left = (x) +"px";
+	player.style.top = (y) + "px";
 	player.scrollIntoView();
 }
 
@@ -130,17 +178,17 @@ function gravity()
 {
 	var gravForce = 0.1;
 	
-	maxY = 850/2.5;
+	//maxY = 870/2.5;
 	//console.log(y)
-	if (y + size < maxY) {
+	if (y + sizeY < maxY) {
 		velocityY += gravForce;	
-	} else if (velocityY > 0 && y + size > maxY)
+	} else if (velocityY > 0 && y + sizeY > maxY)
 	{	
 		velocityY = 0;
 	}
 	
 	y += velocityY;	
-	player.style.top = (y*speed) + "px"
+	
 }
 
 function jump() 
