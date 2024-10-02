@@ -1,6 +1,25 @@
 body {
-  margin:0;
+  width:3010px;
 }
+
+canvas {
+    border: 1px solid #d3d3d3;
+    background-color: #f1f1f1;
+}
+
+
+div.player {
+  width:50px;
+  height:70px;
+  background-color:gray;
+  background-image:url(img/Sprites/Idle.png);
+  background-position: -160px -60px;
+  margin:0;
+  padding:0;
+  position:absolute;
+}
+
+# ================================================
 
 div.test {
   width:50px;
@@ -9,29 +28,7 @@ div.test {
   background-image:url(img/Sprites/Idle.png);
 }
 
-#one {
-  background-position: -40px -60px;
-}
 
-#two {
-  background-position: -167.5px -60px;
-}
-
-#three {
-  background-position: -295px -60px;
-}
-
-#four {
-  background-position: -422.5px -60px;
-}
-
-#five {
-  background-position: -550px -60px;
-}
-
-#six {
-  background-position: -678.5px -60px;
-}
 
 div.player {
   width:50px;
