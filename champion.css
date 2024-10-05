@@ -49,7 +49,7 @@ nav ul li a:hover {
 /* Champion Info Section */
 .champion-info {
     padding: 20px;
-    text-align: left; /* Align text to the left */
+    text-align: left; 
 }
 
 .champion-info h2 {
@@ -64,17 +64,17 @@ nav ul li a:hover {
 }
 
 .champion-details {
-    display: flex; /* Use flexbox for horizontal layout */
-    align-items: center; /* Center items vertically */
+    display: flex; 
+    align-items: center; 
 }
 
 .champion-info img {
-    margin-right: 20px; /* Space between image and text */
-    border-radius: 5px; /* Optional: round the corners of images */
+    margin-right: 20px; 
+    border-radius: 5px; 
 }
 
 .text-content {
-    max-width: 600px; /* Limit the width of the text for better readability */
+    max-width: 600px; 
 }
 
 /* Champion Abilities Section */
@@ -148,9 +148,9 @@ nav ul li a:hover {
 }
 
 .build-guide img {
-    display: block; /* Make the image a block element */
-    margin: 0 auto; /* Center the image */
-    max-width: 50px; /* Ensure images don't exceed a certain size */
+    display: block; 
+    margin: 0 auto; 
+    max-width: 50px;
 }
 
 /* Footer Styles */

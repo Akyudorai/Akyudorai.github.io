@@ -82,20 +82,20 @@ nav ul li a:hover {
 #champion-list ul {
     list-style-type: none;
     padding: 0;
-    display: inline-block; /* Makes the list behave like a block for centering */
+    display: inline-block; 
 }
 
 #champion-list ul li {
     margin: 15px 0;
-    display: flex; /* Use flexbox to align items */
-    align-items: center; /* Center items vertically */
-    justify-content: center; /* Center items horizontally */
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
 }
 
 
 #champion-list ul li img {
-    margin-left: 10px; /* Space between text and image */
-    border-radius: 5px; /* Optional: round the corners of images */
+    margin-left: 10px; 
+    border-radius: 5px; 
 }
 
 #champion-list ul li a {
