@@ -1,0 +1,167 @@
+/* General Style and Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #1f1f1f; /* Dark theme for League of Legends */
+    color: #f0f0f0;
+    line-height: 1.6;
+}
+
+/* Header Styles */
+header {
+    background-color: #141414;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    color: #c4b998; /* Gold/bronze color */
+    font-size: 2.5rem;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 10px 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #c4b998;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Champion Info Section */
+.champion-info {
+    padding: 20px;
+    text-align: left; /* Align text to the left */
+}
+
+.champion-info h2 {
+    color: #c4b998;
+    font-size: 2rem;
+}
+
+.champion-info p {
+    color: #dcdcdc;
+    max-width: 800px;
+    margin: 10px auto;
+}
+
+.champion-details {
+    display: flex; /* Use flexbox for horizontal layout */
+    align-items: center; /* Center items vertically */
+}
+
+.champion-info img {
+    margin-right: 20px; /* Space between image and text */
+    border-radius: 5px; /* Optional: round the corners of images */
+}
+
+.text-content {
+    max-width: 600px; /* Limit the width of the text for better readability */
+}
+
+/* Champion Abilities Section */
+.abilities {
+    background-color: #252525;
+    padding: 20px;
+    text-align: center;
+}
+
+.abilities h2 {
+    color: #c4b998;
+    font-size: 2rem;
+}
+
+
+.abilities table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px auto;
+}
+
+.abilities th,
+.abilities td {
+    border: 1px solid #c4b998; /* Gold border for table */
+    padding: 10px;
+}
+
+.abilities th {
+    background-color: #252525; /* Dark background for header */
+    color: #c4b998; /* Gold text */
+}
+
+.abilities tr:nth-child(even) {
+    background-color: #303030; /* Light grey for even rows */
+}
+
+/* Build Guide Section */
+.build-guide {
+    padding: 20px;
+    text-align: center;
+}
+
+.build-guide h2 {
+    color: #c4b998;
+    font-size: 2rem;
+}
+
+.build-guide h3 {
+    color: #c4b998;
+}
+
+.build-guide ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.build-guide ul li {
+    margin: 10px 0;
+}
+
+.build-guide table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px auto;
+}
+
+.build-guide th,
+.build-guide td {
+    border: 1px solid #c4b998; /* Gold border for table */
+    padding: 10px;
+}
+
+.build-guide img {
+    display: block; /* Make the image a block element */
+    margin: 0 auto; /* Center the image */
+    max-width: 50px; /* Ensure images don't exceed a certain size */
+}
+
+/* Footer Styles */
+footer {
+    background-color: #141414;
+    padding: 15px;
+    text-align: center;
+    margin-top: 30px;
+}
+
+footer p {
+    color: #888;
+    font-size: 0.9rem;
+}
